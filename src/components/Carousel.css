@@ -1,0 +1,13 @@
+/* src/components/Carousel.css */
+
+.carousel-container {
+  display: flex; /* Mostrar las imágenes en una fila */
+  justify-content: space-between; /* Distribuir el espacio entre las imágenes */
+  background-color: #ffcccc; /* Color de fondo rojo claro */
+  padding: 20px; /* Agregar espacio alrededor del carousel */
+}
+
+.carousel-image {
+  width: 15%; /* Ocupar el 15% del ancho máximo */
+  height: auto; /* Mantener la proporción de aspecto */
+}
