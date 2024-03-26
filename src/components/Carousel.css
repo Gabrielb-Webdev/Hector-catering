@@ -1,13 +1,20 @@
 /* src/components/Carousel.css */
 
 .carousel-container {
-  display: flex; /* Mostrar las imágenes en una fila */
-  justify-content: space-between; /* Distribuir el espacio entre las imágenes */
-  background-color: #ffcccc; /* Color de fondo rojo claro */
-  padding: 20px; /* Agregar espacio alrededor del carousel */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffcccc;
+  padding: 20px;
+  overflow: hidden; /* Ocultar imágenes adicionales */
 }
 
 .carousel-image {
-  width: 15%; /* Ocupar el 15% del ancho máximo */
-  height: auto; /* Mantener la proporción de aspecto */
+  width: 15%;
+  height: auto;
+  transition: transform 0.5s ease; /* Agregar transición de desplazamiento */
+}
+
+.center-image {
+  transform: scale(1.2); /* Aumentar el tamaño de la imagen del medio */
 }
