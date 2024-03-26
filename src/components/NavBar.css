@@ -10,7 +10,8 @@
 }
 
 .navbar-left img {
-  width: 100px;
+  width: 50px; /* Tamaño más pequeño */
+  border-radius: 50%; /* Borde redondeado */
 }
 
 .navbar-right ul {
