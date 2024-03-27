@@ -1,20 +1,40 @@
-/* src/components/Carousel.css */
+/* src/components/ImageSlider.css */
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
 
-.carousel-container {
+.slide {
+  transform: scale(0.7);
+  transition: transform 300ms;
+  opacity: 0.5;
+}
+
+.slideWrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ffcccc;
-  padding: 20px;
-  overflow: hidden; /* Ocultar imágenes adicionales */
+  justify-content: center;
 }
 
-.carousel-image {
-  width: 15%;
-  height: auto;
-  transition: transform 0.5s ease; /* Agregar transición de desplazamiento */
+.prevArrow {
+  position: absolute;
+  top: 40%;
+  left: 60px;
+  z-index: 100;
+  cursor: pointer;
+  font-size: 2rem;
 }
 
-.center-image {
-  transform: scale(1.2); /* Aumentar el tamaño de la imagen del medio */
+.nextArrow {
+  position: absolute;
+  top: 40%;
+  right: 60px;
+  z-index: 100;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.app-container {
+  text-align: center;
+}
+
+.container {
+  padding: 2.5rem 0;
 }

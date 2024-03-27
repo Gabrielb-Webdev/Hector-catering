@@ -1,33 +1,79 @@
-// src/components/Carousel.js
+// src/components/ImageSlider.js
 
-import React, { useState, useEffect } from 'react';
-import './Carousel.css';
-import foto400 from '../img/Foto400.png';
+import React, { useState } from "react";
+// 1.
+import Slider from "react-slick";
+import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
-function Carousel() {
-  const [currentIndex, setCurrentIndex] = useState(2); // Índice inicial para la imagen del medio
+import "./Carousel.css";
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      // Cambiar al siguiente índice
-      setCurrentIndex(currentIndex => (currentIndex + 1) % 5);
-    }, 3000); // Cambiar cada 3 segundos
-
-    return () => clearInterval(interval); // Limpiar el intervalo cuando el componente se desmonta
-  }, []);
-
+// 2.
+const NextArrow = ({ onClick }) => {
   return (
-    <div className="carousel-container">
-      {[0, 1, 2, 3, 4].map(index => (
-        <img
-          key={index}
-          src={foto400}
-          alt="Foto"
-          className={`carousel-image ${index === currentIndex ? 'center-image' : ''}`}
-        />
-      ))}
+    <div className="nextArrow" onClick={onClick}>
+      <BsChevronRight />
     </div>
   );
-}
+};
 
-export default Carousel;
+const PrevArrow = ({ onClick }) => {
+  return (
+    <div className="prevArrow" onClick={onClick}>
+      <BsChevronLeft />
+    </div>
+  );
+};
+
+const ImageSlider = ({ images, slidesToShow = 3 }) => {
+  // 3.
+  const [imageIndex, setImageIndex] = useState(0);
+
+  // 4.
+  const settings = {
+    centerMode: true,
+    infinite: true,
+    dots: false,
+    speed: 300,
+    slidesToShow: slidesToShow,
+    centerPadding: "0",
+    swipeToSlide: true,
+    focusOnSelect: true,
+    nextArrow: <NextArrow onClick />,
+    prevArrow: <PrevArrow onClick />,
+    beforeChange: (current, next) => setImageIndex(next),
+    responsive: [
+      {
+        breakpoint: 1490,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 820,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
+  // 5.
+  const templateImages = images.map((image, idx) => {
+    return (
+      <div
+        className={idx === imageIndex ? "activeSlide" : "slide"}
+        key={image.id}
+      >
+        <div className="slideWrapper">
+          {image.code ? image.code : <img src={image.src} alt={image.alt} />}
+        </div>
+      </div>
+    );
+  });
+
+  return <Slider {...settings}>{templateImages}</Slider>;
+};
+
+export default ImageSlider;
