@@ -14,13 +14,13 @@ function App() {
     <div className="App">
       <NavBar />
       <main>
+        <Carousel />
+        <AboutUs />
         <div className="app-container">
           <div className="container">
-            <Carousel images={IMAGES} slidesToShow={5} />
+            <ProductCarousel images={IMAGES} slidesToShow={5} />
           </div>
         </div>
-        <AboutUs />
-        <ProductCarousel />
         <ContactForm />
       </main>
       <Footer />
