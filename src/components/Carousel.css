@@ -2,7 +2,7 @@
 
 .Banner {
     width: 100%;
-    height: 300px; /* Ajusta la altura según tus preferencias */
+    height: 60vh; /* Se ajusta la altura al 60% del tamaño de la ventana */
     background-size: cover;
     background-position: center;
     color: white;
@@ -11,13 +11,36 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  
-  .Banner h1 {
-    font-size: 2.5em;
-  }
-  
-  .Banner p {
-    font-size: 1.2em;
-  }
-  
+    position: relative; /* Añadido para posicionar correctamente los botones de navegación */
+}
+
+.Banner h1 {
+    font-size: 3em; /* Se aumenta el tamaño de la fuente del título */
+    margin-bottom: 10px; /* Se añade un espacio entre el título y el párrafo */
+}
+
+.Banner p {
+    font-size: 1.5em; /* Se aumenta el tamaño de la fuente del párrafo */
+    margin-top: 10px; /* Se añade un espacio entre el párrafo y los botones de navegación */
+}
+
+.navigation-buttons {
+    position: absolute; /* Añadido para posicionar los botones de navegación */
+    bottom: 20px; /* Se colocan los botones en la parte inferior del banner */
+    left: 0;
+    right: 0;
+}
+
+.navigation-buttons button {
+    background: rgba(0, 0, 0, 0.5); /* Se añade un fondo semitransparente a los botones */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin: 0 10px; /* Se añade un margen entre los botones */
+}
+
+.navigation-buttons button:hover {
+    background: rgba(0, 0, 0, 0.7); /* Se cambia el color de fondo al pasar el ratón sobre los botones */
+}
