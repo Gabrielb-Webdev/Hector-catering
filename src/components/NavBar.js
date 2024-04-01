@@ -7,6 +7,11 @@ import './NavBar.css'; // Importar estilos CSS
 function NavBar() {
   return (
     <nav className="navbar">
+      <>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet" />
+      </>
       <div className="navbar-left">
         <img src={logo} alt="Logo" />
       </div>

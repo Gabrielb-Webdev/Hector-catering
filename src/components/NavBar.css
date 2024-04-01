@@ -5,13 +5,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #333;
+  background-color: #1c1b1a;
   color: white;
 }
 
 .navbar-left img {
-  width: 50px; /* Tamaño más pequeño */
-  border-radius: 50%; /* Borde redondeado */
+  width: 20%; /* Tamaño más pequeño */
 }
 
 .navbar-right ul {
@@ -24,6 +23,11 @@
 .navbar-right ul li {
   margin-right: 20px;
   font-size: 18px;
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #f3b01b;
 }
 
 /* Estilos para pantallas más pequeñas (responsive) */
