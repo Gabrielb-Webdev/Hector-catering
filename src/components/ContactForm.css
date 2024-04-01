@@ -18,11 +18,13 @@
 .right-column {
   flex: 1;
   background-color: #f3b01b;
-  padding: 20px;
+  padding: 0px 20px 0px 20px;
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  width: 80%; /* Ajustar el ancho de los inputs */
+  margin-left: 10%;
 }
 
 label {
@@ -37,16 +39,23 @@ textarea {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 20px; /* Ajustar el radio de borde para hacerlo más redondeado */
 }
 
 button {
-  padding: 10px 20px;
-  background-color: #25211d;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+    width: 15%;
+    padding: 10px 20px;
+    background-color: #fdf3ea;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10%;
+    font-size: 20px;
+    font-family: "Merienda", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 
 button:hover {
@@ -54,13 +63,22 @@ button:hover {
 }
 
 .left {
-    line-height: 30px;
+  line-height: 30px;
 }
 
-.left h2{
-    font-size: 80px;
+.left h2 {
+  font-size: 80px;
 }
 
-.left p{
-    font-size: 55px;
+.left p {
+  font-size: 55px;
+}
+
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Ajustar el radio de borde para hacerlo más redondeado */
+  resize: none; /* Evitar que se pueda redimensionar desde la esquina */
+  height: 200px; /* Ajustar la altura del textarea */
 }

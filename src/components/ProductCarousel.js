@@ -1,3 +1,5 @@
+// src/components/ProductCarousel.js
+
 import React, { useState } from "react";
 import Slider from "react-slick";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
@@ -52,24 +54,27 @@ const ImageSlider = ({ images, slidesToShow = 3 }) => {
     ],
   };
 
-  const templateImages = images.map((image, idx) => {
-    return (
-      <div
-        className={idx === imageIndex ? "activeSlide" : "slide"}
-        key={image.id}
-      >
-        <div className="slideWrapper">
-          <img src={image.src} alt={image.alt} />
-        </div>
-        <div className="imageInfo">
-          <h3>{image.title}</h3>
-          <p>{image.description}</p>
-        </div>
-      </div>
-    );
-  });
-
-  return <Slider {...settings}>{templateImages}</Slider>;
+  return (
+    <div>
+      <h2 className="prod">Productos</h2>
+      <Slider {...settings}>
+        {images.map((image, idx) => (
+          <div
+            className={idx === imageIndex ? "activeSlide" : "slide"}
+            key={image.id}
+          >
+            <div className="slideWrapper">
+              <img src={image.src} alt={image.alt} />
+            </div>
+            <div className="imageInfo">
+              <h3>{image.title}</h3>
+              <p>{image.description}</p>
+            </div>
+          </div>
+        ))}
+      </Slider>
+    </div>
+  );
 };
 
 export default ImageSlider;

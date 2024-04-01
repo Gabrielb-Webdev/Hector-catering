@@ -46,3 +46,24 @@
 .slick-slide img{
   cursor: pointer;
 }
+
+.imageInfo h3{
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.imageInfo p{
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.prod{
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
