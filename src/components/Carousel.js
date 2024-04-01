@@ -1,17 +1,38 @@
-// src/components/Carousel.js
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./Carousel.css"; // Importa tus estilos CSS para el carrusel
 
-import React from 'react';
-import bannerImage from '../img/catering.jpg'; // Ruta de la imagen del banner
-import './Carousel.css'; // Importar estilos CSS del banner
+export default function SimpleSlider() {
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
 
-function Carousel() {
   return (
-    <div className="Banner" style={{ backgroundImage: `url(${bannerImage})` }}>
-      {/* Contenido opcional del banner */}
-      <h1>¡Bienvenido a nuestro sitio web!</h1>
-      <p>Descubre nuestras últimas ofertas.</p>
-    </div>
+    <Slider {...settings}>
+      <div>
+        <img src="../images/large_image2.png" alt="Imagen 1" className="carousel-image" />
+      </div>
+      <div>
+        <img src="../images/large_image2.png" alt="Imagen 2" className="carousel-image" />
+      </div>
+      <div>
+        <img src="../images/large_image2.png" alt="Imagen 3" className="carousel-image" />
+      </div>
+      <div>
+        <img src="../images/large_image2.png" alt="Imagen 4" className="carousel-image" />
+      </div>
+      <div>
+        <img src="../images/large_image2.png" alt="Imagen 5" className="carousel-image" />
+      </div>
+      <div>
+        <img src="../images/large_image2.png" alt="Imagen 6" className="carousel-image" />
+      </div>
+    </Slider>
   );
 }
-
-export default Carousel;
