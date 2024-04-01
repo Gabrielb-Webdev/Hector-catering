@@ -1,0 +1,13 @@
+/* src/components/AboutUs.css */
+
+.about {
+  text-align: center;
+  margin-top: 50px; /* Ajusta el margen superior según sea necesario */
+  margin-bottom: 50px; /* Ajusta el margen inferior según sea necesario */
+}
+
+.about-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 25px;
+}
