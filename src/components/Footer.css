@@ -10,9 +10,14 @@ footer {
 }
 
 .contact-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: "Merienda", cursive;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    margin-left: 5%;
 }
 
 .contact-info div {
@@ -29,6 +34,7 @@ footer {
 .logo {
   text-align: center;
   height: 125px; /* Ajustar la altura del logo */
+  margin-right: 5%;
 }
 
 .logo img {

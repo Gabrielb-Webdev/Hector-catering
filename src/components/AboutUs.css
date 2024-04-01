@@ -7,22 +7,79 @@
 }
 
 .about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   max-width: 600px;
   margin: 0 auto;
   padding-top: 25px;
 }
 
+.image-left,
+.image-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-heading {
+  flex: 1;
+  text-align: center;
+  margin: 0 10px; /* Ajustar el margen horizontal */
+  white-space: nowrap; /* Evitar el salto de línea */
+}
+
+.paragraph-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 25px;
+}
 
 .about-content h2{
   font-family: "Merienda", cursive;
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
+  margin-top: -5%;
 }
 
-.about-content p{
+.side-image {
+  max-width: 100px; /* Ajustar el tamaño de las imágenes según sea necesario */
+}
+
+.about-content p {
   font-family: "Merienda", cursive;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
+  margin: 0; /* Eliminar el margen del párrafo */
+}
+
+img.bigote {
+  max-width: 100%;
+}
+
+.new-right-image {
+    margin-right: 5%;
+}
+
+.new-right-image img{
+  max-width: 100%;
+}
+
+.new-left-image {
+    margin-left: 5%;
+}
+
+.new-left-image img{
+  max-width: 100%;
+}
+
+.paragraph {
+    font-family: "Merienda", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.5rem;
 }
