@@ -1,5 +1,10 @@
-/* Estilos para el carrusel */
+/* src/components/Carousel.css */
 .carousel-image {
   width: 100%; /* Ocupa el 100% del ancho disponible */
   height: auto; /* Mantiene la proporción de aspecto */
+}
+
+.slick-slide img {
+  width: 100%;
+  height: auto;
 }
