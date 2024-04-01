@@ -1,0 +1,45 @@
+/* src/components/Footer.css */
+
+footer {
+  background-color: #25211d;
+  color: #f3b01b;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-info div {
+  display: flex;
+  align-items: center;
+}
+
+.contact-info img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo {
+  text-align: center;
+  height: 125px; /* Ajustar la altura del logo */
+}
+
+.logo img {
+  height: 100%; /* Hacer que el logo ocupe toda la altura */
+  width: auto; /* Ajustar el ancho automáticamente */
+}
+
+
+img.WL {
+    width: 45px;
+    margin-left: -5px;
+    margin-right: 0;
+}
+

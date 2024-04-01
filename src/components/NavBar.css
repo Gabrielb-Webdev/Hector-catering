@@ -11,6 +11,7 @@
 
 .navbar-left img {
   width: 20%; /* Tamaño más pequeño */
+  margin-left: 20%;
 }
 
 .navbar-right ul {
@@ -28,6 +29,10 @@
   font-weight: 300;
   font-style: normal;
   color: #f3b01b;
+}
+
+.navbar-right{
+  margin-right: 5%;
 }
 
 /* Estilos para pantallas más pequeñas (responsive) */
@@ -51,3 +56,4 @@
     justify-content: center;
   }
 }
+

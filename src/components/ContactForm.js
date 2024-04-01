@@ -8,7 +8,7 @@ function ContactForm() {
   return (
     <section className="contact-form">
       <div className="left-column">
-        <div>
+        <div className='left'>
           <h2>¡Contáctanos!</h2>
           <p>¿Cómo podemos ayudarte?</p>
         </div>

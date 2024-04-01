@@ -7,6 +7,12 @@
 .left-column {
   flex: 1;
   background-color: #25211d;
+  color: #f3b01b; /* Cambiar color del texto */
+  text-align: center; /* Centrar el contenido */
+}
+
+.left-column img {
+  max-width: 80%; /* Reducir el tamaño de la imagen */
 }
 
 .right-column {
@@ -22,6 +28,7 @@
 label {
   display: block;
   margin-bottom: 5px;
+  font-size: 1.5em; /* Ajustar tamaño del texto */
 }
 
 input[type="text"],
@@ -44,4 +51,16 @@ button {
 
 button:hover {
   background-color: #000;
+}
+
+.left {
+    line-height: 30px;
+}
+
+.left h2{
+    font-size: 80px;
+}
+
+.left p{
+    font-size: 55px;
 }
