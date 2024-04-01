@@ -1,13 +1,8 @@
-// src/components/ProductCarousel.js
-
 import React, { useState } from "react";
-// 1.
 import Slider from "react-slick";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
-
 import "./ProductCarousel.css";
 
-// 2.
 const NextArrow = ({ onClick }) => {
   return (
     <div className="nextArrow" onClick={onClick}>
@@ -25,10 +20,8 @@ const PrevArrow = ({ onClick }) => {
 };
 
 const ImageSlider = ({ images, slidesToShow = 3 }) => {
-  // 3.
   const [imageIndex, setImageIndex] = useState(0);
 
-  // 4.
   const settings = {
     centerMode: true,
     infinite: true,
@@ -59,7 +52,6 @@ const ImageSlider = ({ images, slidesToShow = 3 }) => {
     ],
   };
 
-  // 5.
   const templateImages = images.map((image, idx) => {
     return (
       <div
@@ -67,7 +59,11 @@ const ImageSlider = ({ images, slidesToShow = 3 }) => {
         key={image.id}
       >
         <div className="slideWrapper">
-          {image.code ? image.code : <img src={image.src} alt={image.alt} />}
+          <img src={image.src} alt={image.alt} />
+        </div>
+        <div className="imageInfo">
+          <h3>{image.title}</h3>
+          <p>{image.description}</p>
         </div>
       </div>
     );

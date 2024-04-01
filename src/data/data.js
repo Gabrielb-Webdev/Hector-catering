@@ -5,86 +5,49 @@ export const IMAGES = [
     id: 1,
     src: "/images/image.png",
     alt: "Placeholder image",
+    title: "Image 1 Title",
+    description: "Description for Image 1",
   },
   {
     id: 2,
     src: "/images/image.png",
     alt: "Placeholder image",
+    title: "Image 2 Title",
+    description: "Description for Image 2",
   },
   {
     id: 3,
     src: "/images/image.png",
     alt: "Placeholder image",
+    title: "Image 2 Title",
+    description: "Description for Image 3",
   },
   {
     id: 4,
     src: "/images/image.png",
     alt: "Placeholder image",
+    title: "Image 4 Title",
+    description: "Description for Image 4",
   },
   {
     id: 5,
     src: "/images/image.png",
     alt: "Placeholder image",
+    title: "Image 5 Title",
+    description: "Description for Image 5",
   },
   {
     id: 6,
     src: "/images/image.png",
     alt: "Placeholder image",
+    title: "Image 6 Title",
+    description: "Description for Image 6",
   },
   {
     id: 7,
     src: "/images/image.png",
     alt: "Placeholder image",
-  },
-];
-
-export const VIDEOS = [
-  {
-    id: 1,
-    code: (
-      <iframe
-        title="vid1"
-        width="560"
-        height="315"
-        src=""
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      ></iframe>
-    ),
-  },
-  {
-    id: 2,
-    code: (
-      <iframe
-        title="vid2"
-        width="560"
-        height="315"
-        src=""
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      ></iframe>
-    ),
-  },
-  {
-    id: 3,
-    code: (
-      <iframe
-        title="vid3"
-        width="560"
-        height="315"
-        src=""
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      ></iframe>
-    ),
-  },
-  {
-    id: 4,
-    code: (
-      <iframe
-        title="vid4"
-        width="560"
-        height="315"
-        src=""
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      ></iframe>
-    ),
+    title: "Image 7 Title",
+    description: "Description for Image 7",
   },
 ];
