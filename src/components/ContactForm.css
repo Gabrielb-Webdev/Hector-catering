@@ -3,28 +3,47 @@
 .contact-form {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column; /* Cambiar la dirección del flexbox a columna */
 }
+
+@media (min-width: 800px) {
+  .contact-form {
+    flex-direction: row; /* Cambiar la dirección del flexbox a fila para dispositivos más grandes */
+  }
+
+  .left-column {
+    order: 1; /* Cambiar el orden de aparición en dispositivos más grandes */
+  }
+
+  .right-column {
+    order: 2; /* Cambiar el orden de aparición en dispositivos más grandes */
+  }
+}
+
+
 
 .left-column {
   flex: 1;
   background-color: #25211d;
   color: #f3b01b;
   text-align: center;
-  padding: 20px;
+  padding: 40px 0 0 0;
 }
 
 .left-column img {
-  max-width: 100%;
+  max-width: 60%;
 }
 
 .right-column {
   flex: 1;
   background-color: #f3b01b;
-  padding: 20px;
+  padding: 3rem 0 0 0;
 }
 
 .form-group {
   margin-bottom: 15px;
+  width: 75%;
+  margin: 0 auto;
 }
 
 label {
@@ -50,15 +69,17 @@ textarea {
 }
 
 button {
-  width: calc(100% - 20px);
-  padding: 10px 0;
-  background-color: #fdf3ea;
-  color: black;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 20px;
-  font-family: "Merienda", cursive;
+    width: calc(100% - 20px);
+    padding: 10px 0;
+    background-color: #fdf3ea;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: "Merienda", cursive;
+    margin: 2% 0px 0 13%;
+    width: 25%;
 }
 
 button:hover {
@@ -70,9 +91,48 @@ button:hover {
 }
 
 .left h2 {
-  font-size: 36px;
+    font-size: 3rem;
+    font-family: "Merienda", cursive;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 1px;
 }
 
 .left p {
-  font-size: 24px;
+    font-size: 3rem;
+    font-family: "Merienda", cursive;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 100px;
+}
+
+
+/* Media query para ajustar el tamaño de los elementos en dispositivos más pequeños */
+@media (max-width: 720px) {
+  .left-column h2 {
+    width: 100%; /* Ajustar el ancho al 80% del contenedor */
+    max-width: 80%; /* Establecer un máximo del 80% del contenedor */
+    margin: 0 auto; /* Centrar el elemento en dispositivos más pequeños */
+    font-size: 1.5rem;
+  }
+
+  .left p{
+    font-size: 1rem;
+  }
+}
+
+/* Media query para ajustar el tamaño de los elementos en dispositivos más pequeños */
+@media (max-width: 1280px) {
+  .left-column h2 {
+    width: 100%; /* Ajustar el ancho al 80% del contenedor */
+    max-width: 80%; /* Establecer un máximo del 80% del contenedor */
+    margin: 0 auto; /* Centrar el elemento en dispositivos más pequeños */
+    font-size: 2.5rem;
+  }
+
+  .left p{
+    font-size: 2.5rem;
+  }
 }
