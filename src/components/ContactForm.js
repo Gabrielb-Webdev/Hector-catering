@@ -2,7 +2,7 @@
 
 import React from 'react';
 import './ContactForm.css';
-import contactImage from '../img/Bandeja-contacto.png'; // Asegúrate de importar tu imagen correctamente
+import contactImage from '../img/Bandeja-contacto.png';
 
 function ContactForm() {
   return (
