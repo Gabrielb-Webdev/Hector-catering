@@ -6,7 +6,7 @@ import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import leftImage from '../img/Bigote-izquierdo.png';
 import rightImage from '../img/Bigote_derecho.png';
 import "./ProductCarousel.css";
-import ProductDetail from "./ProductDetail"; // Importa el componente ProductDetail
+import "./ProductDetail.css";
 import { IMAGES } from "../data/data"; // Importa la constante IMAGES
 
 const NextArrow = ({ onClick }) => {
@@ -98,7 +98,7 @@ const ProductCarousel = ({ slidesToShow = 3 }) => {
           </div>
         ))}
       </Slider>
-      <div className={`productDetail ${showDetail ? "open" : ""}`}>
+      <div className={`ProductDetail ${showDetail ? "open" : ""}`}>
         {showDetail && (
           <div>
             <h3>{IMAGES[selectedProductIndex].title}</h3>
