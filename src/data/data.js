@@ -19,7 +19,7 @@ export const IMAGES = [
     id: 3,
     src: "/images/image.png",
     alt: "Placeholder image",
-    title: "Image 2 Title",
+    title: "Image 3 Title",
     description: "Description for Image 3",
   },
   {

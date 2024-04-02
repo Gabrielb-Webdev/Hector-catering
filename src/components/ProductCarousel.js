@@ -1,11 +1,13 @@
 // src/components/ProductCarousel.js
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import leftImage from '../img/Bigote-izquierdo.png';
 import rightImage from '../img/Bigote_derecho.png';
 import "./ProductCarousel.css";
+import ProductDetail from "./ProductDetail"; // Importa el componente ProductDetail
+import { IMAGES } from "../data/data"; // Importa la constante IMAGES
 
 const NextArrow = ({ onClick }) => {
   return (
@@ -23,8 +25,10 @@ const PrevArrow = ({ onClick }) => {
   );
 };
 
-const ImageSlider = ({ images, slidesToShow = 3 }) => {
+const ProductCarousel = ({ slidesToShow = 3 }) => {
   const [imageIndex, setImageIndex] = useState(0);
+  const [selectedProductIndex, setSelectedProductIndex] = useState(0);
+  const [showDetail, setShowDetail] = useState(false); // Estado para controlar la visualización del detalle del producto
 
   const settings = {
     centerMode: true,
@@ -35,8 +39,8 @@ const ImageSlider = ({ images, slidesToShow = 3 }) => {
     centerPadding: "0",
     swipeToSlide: true,
     focusOnSelect: true,
-    nextArrow: <NextArrow onClick />,
-    prevArrow: <PrevArrow onClick />,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     beforeChange: (current, next) => setImageIndex(next),
     responsive: [
       {
@@ -56,35 +60,54 @@ const ImageSlider = ({ images, slidesToShow = 3 }) => {
     ],
   };
 
+  useEffect(() => {
+    setShowDetail(false); // Ocultar la información del producto al cambiar de producto
+  }, [selectedProductIndex]);
+
+  const toggleDetail = (idx) => {
+    setSelectedProductIndex(idx); // Establecer el índice del producto seleccionado
+    setShowDetail(!showDetail); // Cambia el estado para mostrar u ocultar la detalle del producto
+  };
+
   return (
     <div>
       <div className="p-content">
-        <div className="image-left">
-            <img className='bigote' src={leftImage} alt="Bigote izquierdo" />
-          </div>
-        <h2 className="prod">Productos</h2>
-        <div className="image-right">
-            <img className='bigote' src={rightImage} alt="Bigote derecho" />
-          </div>
+        <div className="image-left" onClick={() => setSelectedProductIndex(imageIndex)}>
+          <img className='bigote' src={leftImage} alt="Bigote izquierdo" />
         </div>
+        <h2 className="prod">Productos</h2>
+        <div className="image-right" onClick={() => setSelectedProductIndex(imageIndex)}>
+          <img className='bigote' src={rightImage} alt="Bigote derecho" />
+        </div>
+      </div>
       <Slider {...settings}>
-        {images.map((image, idx) => (
+        {IMAGES.map((image, idx) => (
           <div
             className={idx === imageIndex ? "activeSlide" : "slide"}
             key={image.id}
           >
-            <div className="slideWrapper">
+            <div className="slideWrapper" onClick={() => setImageIndex(idx)}>
               <img src={image.src} alt={image.alt} />
             </div>
-            <div className="imageInfo">
-              <h3>{image.title}</h3>
-              <p>{image.description}</p>
-            </div>
+            {idx === imageIndex && (
+              <div className="imageInfo">
+                <h3>{image.title}</h3>
+                <button className="bimageInfo" onClick={() => toggleDetail(idx)}>Ver más</button>
+              </div>
+            )}
           </div>
         ))}
       </Slider>
+      <div className={`productDetail ${showDetail ? "open" : ""}`}>
+        {showDetail && (
+          <div>
+            <h3>{IMAGES[selectedProductIndex].title}</h3>
+            <p>{IMAGES[selectedProductIndex].description}</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
 
-export default ImageSlider;
+export default ProductCarousel;
