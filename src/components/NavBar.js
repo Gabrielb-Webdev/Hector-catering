@@ -13,6 +13,17 @@ function NavBar() {
     document.querySelector('.navbar-right ul').classList.toggle('show'); // Agregar o quitar la clase 'show'
   };
 
+  const scrollToSection = (sectionId, event) => {
+    event.preventDefault(); // Detener el comportamiento predeterminado del navegador
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const navbarHeight = document.querySelector('.navbar').offsetHeight; // Obtener la altura de la barra de navegación
+      const offset = navbarHeight + -15; // Ajustar el offset para desplazarse un poco más bajo
+      const sectionPosition = section.offsetTop - offset; // Calcular la posición de desplazamiento
+      window.scrollTo({ top: sectionPosition, behavior: 'smooth' }); // Desplazarse a la posición calculada suavemente
+    }
+  };
+
   return (
     <nav className="navbar">
       <>
@@ -22,7 +33,7 @@ function NavBar() {
       </>
       <div className="navbar-left">
         {/* Envolver el logo con un enlace */}
-        <a href="/">
+        <a href="#inicio"> {/* Agregar href="#inicio" para ir al inicio */}
           <img src={logo} alt="Logo" />
         </a>
       </div>
@@ -35,9 +46,11 @@ function NavBar() {
         </div>
         {/* Menú de navegación */}
         <ul>
-          <li>Inicio</li>
-          <li>Productos</li>
-          <li>Contacto</li>
+          <li><a href="#inicio" onClick={(event) => scrollToSection('inicio', event)}>Inicio</a></li> {/* Agregar href="#inicio" para ir al inicio */}
+          <li>
+            <a href="#productos" onClick={(event) => scrollToSection('productos', event)}>Productos</a>
+          </li>
+          <li><a href="#contacto" onClick={(event) => scrollToSection('contacto', event)}>Contacto</a></li> {/* Agregar href="#contacto" para ir a ContactForm */}
         </ul>
       </div>
     </nav>

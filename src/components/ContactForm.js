@@ -6,7 +6,7 @@ import contactImage from '../img/Bandeja-contacto.png';
 
 function ContactForm() {
   return (
-    <section className="contact-form">
+    <section id="contacto" className="contact-form">
       <div className="left-column">
         <div className='left'>
           <h2>¡Contáctanos!</h2>

@@ -16,7 +16,7 @@ function App() {
       <main>
         <Carousel />
         <AboutUs />
-        <div className="app-container">
+        <div id="productos" className="app-container">
           <div className="container">
             <ProductCarousel images={IMAGES} slidesToShow={5} />
           </div>

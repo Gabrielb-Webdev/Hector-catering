@@ -17,7 +17,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="carousel-container">
+    <div id="inicio" className="carousel-container">
       <Slider {...settings}>
         <div>
           <img src="images/large_image2.png" alt="Imagen 1" />
