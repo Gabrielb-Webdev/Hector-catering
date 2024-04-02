@@ -1,3 +1,4 @@
+// ProductCarousel.js
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
@@ -63,8 +64,12 @@ const ProductCarousel = ({ slidesToShow = 3 }) => {
   }, [selectedProductIndex]);
 
   const toggleDetail = (idx) => {
-    setSelectedProductIndex(idx); // Establecer el índice del producto seleccionado
-    setShowDetail(!showDetail); // Cambia el estado para mostrar u ocultar la detalle del producto
+    if (idx === selectedProductIndex && showDetail) {
+      setShowDetail(false); // Si se hace clic en el mismo producto ya abierto, cierra el detalle
+    } else {
+      setSelectedProductIndex(idx); // Establece el nuevo índice del producto seleccionado
+      setShowDetail(true); // Abre el detalle del nuevo producto seleccionado
+    }
   };
 
   return (
@@ -84,7 +89,7 @@ const ProductCarousel = ({ slidesToShow = 3 }) => {
             className={idx === imageIndex ? "activeSlide" : "slide"}
             key={image.id}
           >
-            <div className="slideWrapper" onClick={() => setImageIndex(idx)}>
+            <div className="slideWrapper" onClick={() => toggleDetail(idx)}>
               <img src={image.src} alt={image.alt} />
             </div>
             {idx === imageIndex && (

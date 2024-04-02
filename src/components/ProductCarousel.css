@@ -32,6 +32,11 @@
   font-size: 2rem;
 }
 
+.prevArrow,
+.nextArrow{
+  display: none;
+}
+
 .app-container {
     text-align: center;
     background-color: #F3B01C;
