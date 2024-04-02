@@ -10,13 +10,13 @@ footer {
 }
 
 .contact-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centrar elementos horizontalmente */
-  font-family: "Merienda", cursive;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: "Merienda", cursive;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
 }
 
 .contact-info div {
@@ -44,7 +44,7 @@ footer {
 
 img.WL {
   width: 45px;
-  margin-left: -10%;
+  margin-left: -2%;
 }
 
 .PF{

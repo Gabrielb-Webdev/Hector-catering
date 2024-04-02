@@ -12,11 +12,11 @@ function Footer() {
       <div className="contact-info">
         <div>
           <img className='WL' src={LogoW} alt="WhatsApp Logo" />
-          <p>WhatsApp: XXX-XXX-XXX</p>
+          <p>WhatsApp: +54 9 11-3032-0938</p>
         </div>
         <div>
           <img className='EL' src={LogoC} alt="Email Logo" />
-          <p className='PF'>Email: info@hectorcatering.com</p>
+          <p className='PF'>Email: legout.eventos.catering@gmail.com</p>
         </div>
       </div>
       <div className="logo">
