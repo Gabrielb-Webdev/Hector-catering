@@ -18,7 +18,6 @@ function NavBar() {
       <div className="navbar-right">
         <ul>
           <li>Inicio</li>
-          <li>Servicios</li>
           <li>Productos</li>
           <li>Contacto</li>
         </ul>

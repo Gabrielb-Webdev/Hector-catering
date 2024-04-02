@@ -35,25 +35,3 @@
   margin-right: 5%;
 }
 
-/* Estilos para pantallas más pequeñas (responsive) */
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar-left,
-  .navbar-right {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .navbar-right {
-    text-align: center;
-  }
-
-  .navbar-right ul {
-    justify-content: center;
-  }
-}
-
