@@ -9,7 +9,8 @@
   color: white;
   height: 80px; /* Altura predeterminada */
   transition: height 0.3s ease, padding-bottom 0.3s ease; /* Agregar transición para suavizar el cambio */
-  position: fixed;
+  position: sticky; /* Cambiar de fixed a sticky */
+  top: 0; /* Pegar la barra de navegación en la parte superior */
   z-index: 1000;
   width: 100%;
 }
