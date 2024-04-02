@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import leftImage from '../img/Bigote-izquierdo.png';
+import rightImage from '../img/Bigote_derecho.png';
 import "./ProductCarousel.css";
 
 const NextArrow = ({ onClick }) => {
@@ -56,7 +58,15 @@ const ImageSlider = ({ images, slidesToShow = 3 }) => {
 
   return (
     <div>
-      <h2 className="prod">Productos</h2>
+      <div className="p-content">
+        <div className="image-left">
+            <img className='bigote' src={leftImage} alt="Bigote izquierdo" />
+          </div>
+        <h2 className="prod">Productos</h2>
+        <div className="image-right">
+            <img className='bigote' src={rightImage} alt="Bigote derecho" />
+          </div>
+        </div>
       <Slider {...settings}>
         {images.map((image, idx) => (
           <div

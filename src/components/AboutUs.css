@@ -42,6 +42,7 @@
   font-weight: 900;
   font-style: normal;
   margin-top: -5%;
+  font-size: 1.5rem;
 }
 
 .side-image {
@@ -57,7 +58,7 @@
 }
 
 img.bigote {
-  max-width: 100%;
+  max-width: 80%;
 }
 
 .new-right-image {

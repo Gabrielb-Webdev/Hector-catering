@@ -67,3 +67,40 @@
   font-weight: 800;
   font-style: normal;
 }
+
+.p-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 25px;
+}
+
+.image-left,
+.image-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.p-content h2{
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  margin-top: 0%;
+  font-size: 2rem;
+}
+
+.p-content p {
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  margin: 0; /* Eliminar el margen del párrafo */
+}
+
+.p-content img.bigote{
+  width: 80%;
+}
