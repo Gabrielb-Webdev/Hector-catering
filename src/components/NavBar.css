@@ -100,4 +100,8 @@
   .navbar.menu-open {
     padding-bottom: 100px;
   }
+
+  .navbar-left img{
+    margin-left: 5%;
+  }
 }
