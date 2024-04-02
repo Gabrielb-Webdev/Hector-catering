@@ -21,7 +21,10 @@ function NavBar() {
         <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet" />
       </>
       <div className="navbar-left">
-        <img src={logo} alt="Logo" />
+        {/* Envolver el logo con un enlace */}
+        <a href="/">
+          <img src={logo} alt="Logo" />
+        </a>
       </div>
       <div className={`navbar-right ${isOpen ? 'open' : ''}`}>
         {/* Botón de hamburguesa */}
@@ -41,4 +44,4 @@ function NavBar() {
   );
 }
 
-export default NavBar; // Agregar esta línea para exportar el componente NavBar por defecto
+export default NavBar;

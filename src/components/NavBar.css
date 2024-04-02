@@ -17,6 +17,11 @@
 .navbar-left img {
   width: 20%; /* Tamaño más pequeño */
   margin-left: 20%;
+  cursor: pointer; /* Agregar cursor de puntero */
+}
+
+.navbar-left img:hover {
+  opacity: 0.8; /* Cambiar la opacidad cuando se pasa el mouse */
 }
 
 .navbar-right {
