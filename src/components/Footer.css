@@ -5,30 +5,30 @@ footer {
   color: #f3b01b;
   padding: 20px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: center; /* Centrar elementos horizontalmente */
+  justify-content: space-between; /* Espacio entre los elementos */
 }
 
 .contact-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    font-family: "Merienda", cursive;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
-    margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar elementos horizontalmente */
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
 }
 
 .contact-info div {
   display: flex;
   align-items: center;
+  margin-left: 3rem;
 }
 
 .contact-info img {
-    width: 30px;
-    height: auto;
-    margin-right: 10px;
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
 }
 
 .logo {
@@ -42,10 +42,47 @@ footer {
   width: auto; /* Ajustar el ancho automáticamente */
 }
 
-
 img.WL {
-    width: 45px;
-    margin-left: -5px;
-    margin-right: 0;
+  width: 45px;
+  margin-left: -10%;
 }
 
+.PF{
+  margin-left: 10px;
+}
+
+@media (max-width: 800px) {
+  footer {
+    flex-direction: column; /* Cambiar a disposición de columna */
+    align-items: center; /* Centrar elementos horizontalmente */
+  }
+
+  .contact-info {
+    align-items: center; /* Alinear elementos al inicio */
+    margin-left: 0; /* Eliminar el margen izquierdo en dispositivos más pequeños */
+  }
+
+  .contact-info div {
+    flex-direction: column; /* Cambiar a disposición de columna */
+  }
+
+  .contact-info img {
+    margin-right: 0; /* Eliminar el margen derecho de las imágenes */
+  }
+
+  .logo {
+    margin-right: 0; /* Eliminar el margen derecho del logo */
+    margin-top: 20px; /* Agregar espacio superior */
+  }
+
+  .contact-info div{
+    margin-left: 0;
+  }
+  img.WL {
+    margin-left: 0;
+  }
+
+  .PF{
+    margin-left: 0;
+  }  
+}

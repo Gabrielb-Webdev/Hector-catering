@@ -110,7 +110,7 @@ button:hover {
 
 
 /* Media query para ajustar el tamaño de los elementos en dispositivos más pequeños */
-@media (max-width: 720px) {
+@media (max-width: 800px) {
   .left-column h2 {
     width: 100%; /* Ajustar el ancho al 80% del contenedor */
     max-width: 80%; /* Establecer un máximo del 80% del contenedor */
@@ -129,10 +129,10 @@ button:hover {
     width: 100%; /* Ajustar el ancho al 80% del contenedor */
     max-width: 80%; /* Establecer un máximo del 80% del contenedor */
     margin: 0 auto; /* Centrar el elemento en dispositivos más pequeños */
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 
   .left p{
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 }

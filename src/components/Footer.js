@@ -15,8 +15,8 @@ function Footer() {
           <p>WhatsApp: XXX-XXX-XXX</p>
         </div>
         <div>
-          <img src={LogoC} alt="Email Logo" />
-          <p>Email: info@hectorcatering.com</p>
+          <img className='EL' src={LogoC} alt="Email Logo" />
+          <p className='PF'>Email: info@hectorcatering.com</p>
         </div>
       </div>
       <div className="logo">
