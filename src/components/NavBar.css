@@ -45,6 +45,15 @@
   color: #f3b01b;
 }
 
+.navbar-right ul li a {
+  text-decoration: none; /* Quitar subrayado */
+  color: inherit; /* Heredar el color del texto */
+}
+
+.navbar-right ul li a:hover {
+  color: #ff0000; /* Cambiar el color al pasar el cursor por encima */
+}
+
 /* Estilos para el botón de hamburguesa */
 .hamburger-menu {
   display: none; /* Ocultar por defecto en pantallas mayores a 800px */
