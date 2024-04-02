@@ -7,11 +7,17 @@
   padding: 20px;
   background-color: #1c1b1a;
   color: white;
+  height: 80px; /* Altura predeterminada */
+  transition: height 0.3s ease, padding-bottom 0.3s ease; /* Agregar transición para suavizar el cambio */
 }
 
 .navbar-left img {
   width: 20%; /* Tamaño más pequeño */
   margin-left: 20%;
+}
+
+.navbar-right {
+  margin-right: 5%;
 }
 
 .navbar-right ul {
@@ -31,7 +37,67 @@
   color: #f3b01b;
 }
 
-.navbar-right{
-  margin-right: 5%;
+/* Estilos para el botón de hamburguesa */
+.hamburger-menu {
+  display: none; /* Ocultar por defecto en pantallas mayores a 800px */
+  cursor: pointer;
 }
 
+.hamburger-menu span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin-bottom: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hamburger-menu.open span:nth-child(1) {
+  transform: translateY(10px) rotate(50deg);
+}
+
+.hamburger-menu.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.open span:nth-child(3) {
+  transform: translateY(-10px) rotate(-50deg);
+}
+
+/* Mostrar el menú en pantallas menores a 800px */
+@media screen and (max-width: 800px) {
+  .navbar-right ul {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .navbar-right.open ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 10px;
+    background-color: #1c1b1a;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: end;
+  }
+
+  .navbar-right.open ul li {
+    margin-bottom: 10px;
+  }
+
+  /* Aumentar el padding-bottom cuando el menú está abierto */
+  .navbar.menu-open {
+    padding-bottom: 100px;
+  }
+}
