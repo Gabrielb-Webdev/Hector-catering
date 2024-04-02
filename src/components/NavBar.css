@@ -8,7 +8,6 @@
   background-color: #1c1b1a;
   color: white;
   height: 80px; /* Altura predeterminada */
-  transition: padding-bottom 0.3s ease, height 0.3s ease; /* Cambiar el orden de las transiciones */
   position: sticky; /* Cambiar de fixed a sticky */
   top: 0; /* Pegar la barra de navegación en la parte superior */
   z-index: 1000;
