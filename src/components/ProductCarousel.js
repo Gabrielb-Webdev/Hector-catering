@@ -1,12 +1,10 @@
-// src/components/ProductCarousel.js
-
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import leftImage from '../img/Bigote-izquierdo.png';
 import rightImage from '../img/Bigote_derecho.png';
 import "./ProductCarousel.css";
-import "./ProductDetail.css";
+import ProductDetail from "./ProductDetail"; // Importa el componente ProductDetail
 import { IMAGES } from "../data/data"; // Importa la constante IMAGES
 
 const NextArrow = ({ onClick }) => {
@@ -98,14 +96,7 @@ const ProductCarousel = ({ slidesToShow = 3 }) => {
           </div>
         ))}
       </Slider>
-      <div className={`ProductDetail ${showDetail ? "open" : ""}`}>
-        {showDetail && (
-          <div>
-            <h3>{IMAGES[selectedProductIndex].title}</h3>
-            <p>{IMAGES[selectedProductIndex].description}</p>
-          </div>
-        )}
-      </div>
+      <ProductDetail showDetail={showDetail} selectedProductIndex={selectedProductIndex} />
     </div>
   );
 };

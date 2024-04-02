@@ -1,13 +1,13 @@
 /* src/components/ProductDetail.css */
 
-.productDetail {
+.ProductDetail {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
   transition: opacity 0.5s ease, max-height 0.5s ease;
 }
 
-.productDetail.open {
+.ProductDetail.open {
   opacity: 1;
   max-height: 500px; /* Ajusta el valor según sea necesario */
 }
