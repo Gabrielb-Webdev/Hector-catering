@@ -4,11 +4,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0 25px 0;
+  padding: 20px 0; /* Modificar el padding */
   background-color: #1c1b1a;
   color: white;
   height: 80px; /* Altura predeterminada */
-  transition: height 0.3s ease, padding-bottom 0.3s ease; /* Agregar transición para suavizar el cambio */
+  transition: padding-bottom 0.3s ease, height 0.3s ease; /* Cambiar el orden de las transiciones */
   position: sticky; /* Cambiar de fixed a sticky */
   top: 0; /* Pegar la barra de navegación en la parte superior */
   z-index: 1000;
@@ -26,7 +26,7 @@
 }
 
 .navbar-right {
-  margin-right: 50px;
+  margin-right: 25px;
 }
 
 .navbar-right ul {
@@ -94,15 +94,17 @@
     flex-direction: column;
     position: absolute;
     top: 80px;
-    right: 25px;
+    right: 0;
     background-color: #1c1b1a;
     padding: 10px;
     border-radius: 5px;
     text-align: end;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.3s ease 0.3s; /* Transición con retraso de 0.3s */
   }
 
-  .navbar-right.open ul li {
-    margin-bottom: 10px;
+  .navbar-right.open ul.show {
+    opacity: 1; /* Mostrar */
   }
 
   /* Aumentar el padding-bottom cuando el menú está abierto */

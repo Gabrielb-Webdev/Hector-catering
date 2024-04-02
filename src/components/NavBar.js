@@ -9,8 +9,8 @@ function NavBar() {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-    // Agregar clase al navbar cuando se abre el menú
     document.querySelector('.navbar').classList.toggle('menu-open');
+    document.querySelector('.navbar-right ul').classList.toggle('show'); // Agregar o quitar la clase 'show'
   };
 
   return (
