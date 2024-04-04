@@ -1,29 +1,67 @@
 /* src/components/ProductDetail.css */
 
-.ProductDetail {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: opacity 0.5s ease, max-height 0.5s ease;
+.bimageInfo {
+    margin: 2% 0px 0 0;
+    width: 30%;
 }
 
-.ProductDetail.open {
-  opacity: 1;
-  max-height: 500px; /* Ajusta el valor según sea necesario */
+.ReactModal__Overlay.ReactModal__Overlay--after-open {
+    z-index: 1000;
 }
 
-.ProductDetail-content {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: opacity 0.5s ease, max-height 0.5s ease;
+.ReactModal__Content.ReactModal__Content--after-open {
+    background-color: rgba(243, 176, 27, 0.7) !important; /* Color #f3b01b con 70% de opacidad */
 }
 
-.ProductDetail-content.open {
-  opacity: 1;
-  max-height: 500px;
+.product-image {
+  width: 60%; /* Ajusta el ancho máximo de la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
 }
 
-.productImage {
-  cursor: pointer;
+.product-detail-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-detail-left {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.product-detail-right {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.product-title-container {
+    display: flex;
+    align-items: center;
+    width: auto; /* Cambiar a "auto" para permitir que el contenedor se ajuste al contenido */
+    height: auto;
+}
+
+.product-title-left {
+    /* flex: 1; */ /* Comentar o eliminar esta línea para ajustar el ancho automáticamente */
+    width: 5%; /* Cambiar a "auto" para permitir que el ancho se ajuste al contenido */
+    margin-right: 10px; /* Ajustar el margen según sea necesario */
+}
+
+.product-title-right {
+    /* flex: 1; */
+    width: 3.5%;
+    text-align: right;
+    margin-left: 10px;
+}
+
+
+.product-title-left img,
+.product-title-right img {
+  max-width: 100px; /* Ajusta el ancho máximo de las imágenes */
+  height: auto; /* Mantiene la proporción de las imágenes */
+}
+
+
+
+.product-title-container h2 {
+    width: 70%;
 }

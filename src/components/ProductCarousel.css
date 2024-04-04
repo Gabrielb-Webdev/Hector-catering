@@ -12,6 +12,7 @@
 .slideWrapper {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 .prevArrow {
@@ -113,3 +114,4 @@
 .bimageInfo{
   margin: 2% 0px 0 0;
 }
+

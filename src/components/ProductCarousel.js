@@ -1,12 +1,14 @@
-// ProductCarousel.js
-import React, { useState, useEffect } from "react";
+// src/components/ProductCarousel.js
+
+import React, { useState } from "react";
 import Slider from "react-slick";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import leftImage from '../img/Bigote-izquierdo.png';
 import rightImage from '../img/Bigote_derecho.png';
 import "./ProductCarousel.css";
-import ProductDetail from "./ProductDetail"; // Importa el componente ProductDetail
-import { IMAGES } from "../data/data"; // Importa la constante IMAGES
+import { IMAGES } from "../data/data";
+import Modal from 'react-modal'; // Importa react-modal
+import ProductDetail from './ProductDetail'; // Importa el componente ProductDetail
 
 const NextArrow = ({ onClick }) => {
   return (
@@ -27,7 +29,7 @@ const PrevArrow = ({ onClick }) => {
 const ProductCarousel = ({ slidesToShow = 3 }) => {
   const [imageIndex, setImageIndex] = useState(0);
   const [selectedProductIndex, setSelectedProductIndex] = useState(0);
-  const [showDetail, setShowDetail] = useState(false); // Estado para controlar la visualización del detalle del producto
+  const [showDetail, setShowDetail] = useState(false);
 
   const settings = {
     centerMode: true,
@@ -59,27 +61,23 @@ const ProductCarousel = ({ slidesToShow = 3 }) => {
     ],
   };
 
-  useEffect(() => {
-    setShowDetail(false); // Ocultar la información del producto al cambiar de producto
-  }, [selectedProductIndex]);
-
   const toggleDetail = (idx) => {
-    if (idx === selectedProductIndex && showDetail) {
-      setShowDetail(false); // Si se hace clic en el mismo producto ya abierto, cierra el detalle
-    } else {
-      setSelectedProductIndex(idx); // Establece el nuevo índice del producto seleccionado
-      setShowDetail(true); // Abre el detalle del nuevo producto seleccionado
-    }
+    setSelectedProductIndex(idx);
+    setShowDetail(true);
+  };
+
+  const handleCloseDetail = () => {
+    setShowDetail(false);
   };
 
   return (
     <div>
       <div className="p-content">
-        <div className="image-left" onClick={() => setSelectedProductIndex(imageIndex)}>
+        <div className="image-left" onClick={() => setImageIndex(imageIndex - 1)}>
           <img className='bigote' src={leftImage} alt="Bigote izquierdo" />
         </div>
         <h2 className="prod">Productos</h2>
-        <div className="image-right" onClick={() => setSelectedProductIndex(imageIndex)}>
+        <div className="image-right" onClick={() => setImageIndex(imageIndex + 1)}>
           <img className='bigote' src={rightImage} alt="Bigote derecho" />
         </div>
       </div>
@@ -89,19 +87,31 @@ const ProductCarousel = ({ slidesToShow = 3 }) => {
             className={idx === imageIndex ? "activeSlide" : "slide"}
             key={image.id}
           >
-            <div className="slideWrapper" onClick={() => toggleDetail(idx)}>
+            <div className="slideWrapper">
               <img src={image.src} alt={image.alt} />
-            </div>
-            {idx === imageIndex && (
               <div className="imageInfo">
                 <h3>{image.title}</h3>
-                <button className="bimageInfo" onClick={() => toggleDetail(idx)}>Ver más</button>
+                <p>{image.description}</p>
               </div>
-            )}
+              {idx === imageIndex && (
+                <div className="verMasButtonContainer">
+                  <button className="bimageInfo verMasButton" onClick={() => toggleDetail(idx)}>Ver más</button>
+                </div>
+              )}
+            </div>
           </div>
         ))}
       </Slider>
-      <ProductDetail showDetail={showDetail} selectedProductIndex={selectedProductIndex} />
+      <Modal
+        isOpen={showDetail}
+        onRequestClose={handleCloseDetail}
+        contentLabel="Producto Detail"
+      >
+        <ProductDetail
+          product={IMAGES[selectedProductIndex]}
+          onClose={handleCloseDetail}
+        />
+      </Modal>
     </div>
   );
 };

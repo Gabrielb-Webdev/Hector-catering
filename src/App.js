@@ -18,7 +18,10 @@ function App() {
         <AboutUs />
         <div id="productos" className="app-container">
           <div className="container">
-            <ProductCarousel images={IMAGES} slidesToShow={5} />
+            {/* Envuelve el componente ProductCarousel con un div y aplica la clase */}
+            <div className="product-carousel-container">
+              <ProductCarousel images={IMAGES} slidesToShow={5} />
+            </div>
           </div>
         </div>
         <ContactForm />
