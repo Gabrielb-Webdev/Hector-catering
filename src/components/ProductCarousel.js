@@ -76,7 +76,7 @@ const ProductCarousel = ({ slidesToShow = 3 }) => {
         <div className="image-left" onClick={() => setImageIndex(imageIndex - 1)}>
           <img className='bigote' src={leftImage} alt="Bigote izquierdo" />
         </div>
-        <h2 className="prod">Productos</h2>
+        <h2 className="prod">Eventos</h2>
         <div className="image-right" onClick={() => setImageIndex(imageIndex + 1)}>
           <img className='bigote' src={rightImage} alt="Bigote derecho" />
         </div>
