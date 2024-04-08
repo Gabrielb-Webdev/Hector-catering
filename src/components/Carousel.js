@@ -20,13 +20,13 @@ const Carousel = () => {
     <div id="inicio" className="carousel-container">
       <Slider {...settings}>
         <div>
-          <img src="images/large_image2.png" alt="Imagen 1" />
+          <img src="images/Ambientación.jpeg" alt="Imagen 1" />
         </div>
         <div>
-          <img src="images/large_image2.png" alt="Imagen 2" />
+          <img src="images/barra_libre.jpeg" alt="Imagen 2" />
         </div>
         <div>
-          <img src="images/large_image2.png" alt="Imagen 3" />
+          <img src="images/Iluminación_y_Sonido.jpeg" alt="Imagen 3" />
         </div>
         {/* Agrega más elementos div con imágenes según sea necesario */}
       </Slider>
