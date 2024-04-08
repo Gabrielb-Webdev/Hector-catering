@@ -3,7 +3,7 @@
 export const IMAGES = [
   {
     id: 1,
-    src: "/images/image.png",
+    src: "/images/catering.jpeg",
     alt: "Placeholder image",
     title: "Catering",
     description: "Lo Mejor Para El Paladar",
@@ -16,7 +16,7 @@ export const IMAGES = [
   },
   {
     id: 2,
-    src: "/images/image.png",
+    src: "/images/barra_libre.jpeg",
     alt: "Placeholder image",
     title: " Barra Libre",
     description: "Experimenta El Sabor",
@@ -29,7 +29,7 @@ export const IMAGES = [
   },
   {
     id: 3,
-    src: "/images/image.png",
+    src: "/images/Ambientación.jpeg",
     alt: "Placeholder image",
     title: "Ambientación",
     description: "El Mejor Ambiento Para Vos",
@@ -41,7 +41,7 @@ export const IMAGES = [
   },
   {
     id: 4,
-    src: "/images/image.png",
+    src: "/images/Iluminación_y_Sonido.jpeg",
     alt: "Placeholder image",
     title: "Iluminación y Sonido",
     description: "Lo Mejor Para Tu Evento",
@@ -54,7 +54,7 @@ export const IMAGES = [
   },
   {
     id: 5,
-    src: "/images/image.png",
+    src: "/images/test.jpeg",
     alt: "Placeholder image",
     title: "Image 5 Title",
     description: "Description for Image 5",
@@ -64,7 +64,7 @@ export const IMAGES = [
   },
   {
     id: 6,
-    src: "/images/image.png",
+    src: "/images/test.jpeg",
     alt: "Placeholder image",
     title: "Image 6 Title",
     description: "Description for Image 6",
@@ -74,7 +74,7 @@ export const IMAGES = [
   },
   {
     id: 7,
-    src: "/images/image.png",
+    src: "/images/test.jpeg",
     alt: "Placeholder image",
     title: "Image 7 Title",
     description: "Description for Image 7",

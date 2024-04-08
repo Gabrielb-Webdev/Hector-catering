@@ -1,14 +1,13 @@
 // src/components/ProductCarousel.js
 import React, { useState } from "react";
-
 import Slider from "react-slick";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import leftImage from '../img/Bigote-izquierdo.png';
 import rightImage from '../img/Bigote_derecho.png';
 import "./ProductCarousel.css";
 import { IMAGES } from "../data/data";
-import Modal from 'react-modal'; // Importa react-modal
-import ProductDetail from './ProductDetail'; // Importa el componente ProductDetail
+import Modal from 'react-modal';
+import ProductDetail from './ProductDetail';
 
 const NextArrow = ({ onClick }) => {
   return (
@@ -88,7 +87,11 @@ const ProductCarousel = ({ slidesToShow = 3 }) => {
             key={image.id}
           >
             <div className="slideWrapper">
-              <img src={image.src} alt={image.alt} />
+              <img
+                src={image.src}
+                alt={image.alt}
+                style={{ maxWidth: "100%", height: "auto" }} // Establece el tamaño máximo de la imagen
+              />
               <div className="imageInfo">
                 <h3>{image.title}</h3>
                 <p>{image.description}</p>

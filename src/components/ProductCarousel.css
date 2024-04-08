@@ -33,9 +33,16 @@
   font-size: 2rem;
 }
 
-.prevArrow,
-.nextArrow{
-  display: none;
+@media (min-width: 1200px) {
+  .prevArrow,
+  .nextArrow{
+    display: none;
+  }
+}
+
+.nextArrow,
+.prevArrow{
+  top: 35%;
 }
 
 .app-container {
