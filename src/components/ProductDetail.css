@@ -11,20 +11,25 @@
 
 .ReactModal__Content.ReactModal__Content--after-open {
     background-color: #25211d !important;
-    padding: 50px !important;
+    padding: 25px !important;
     inset: 75px !important;
 }
 
 .product-image {
-  width: 80%;
-  max-width: 100%; /* Ajusta el ancho máximo de la imagen */
-  height: auto; /* Mantiene la proporción de la imagen */
-  margin-left: 25px;
+    width: 60%;
+    max-width: 100%;
+    height: auto;
+    margin-left: 18%;
 }
 
 .product-detail-container {
   display: flex;
   width: 100%;
+}
+
+.product-detail-container .p-content {
+    padding-top: 150px;
+    margin-left: -125px;
 }
 
 .product-detail-left,
@@ -46,19 +51,18 @@
     align-items: center;
     width: auto; /* Cambiar a "auto" para permitir que el contenedor se ajuste al contenido */
     height: auto;
+    justify-content: center;
 }
 
 .product-title-left {
     /* flex: 1; */ /* Comentar o eliminar esta línea para ajustar el ancho automáticamente */
-    width: 5%; /* Cambiar a "auto" para permitir que el ancho se ajuste al contenido */
-    margin-right: 10px; /* Ajustar el margen según sea necesario */
+    width: 10%; /* Cambiar a "auto" para permitir que el ancho se ajuste al contenido */
 }
 
 .product-title-right {
     /* flex: 1; */
-    width: 6%;
+    width: 11%;
     text-align: right;
-    margin-left: 10px;
 }
 
 
@@ -71,25 +75,38 @@
 
 
 .product-title-container h2 {
-    width: 70%;
+    width: 60%;
     font-size: 4rem;
+    text-align: center;
 }
 
-/* Agrega esto al archivo ProductDetail.css */
 .close-button {
-  position: absolute;
-  top: 5px;
-  right: 50px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #f3b01b; /* Color de fondo con opacidad */
-  border: none;
-  cursor: pointer;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
+    position: fixed;
+    top: -15px;
+    right: 25px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f3b01b;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
+.product-detail-right h3,
+.product-detail-right p{
+  text-align: justify;
+  margin-left: -80px;
+}
+
+p.text {
+    font-size: 1.5rem;
+}
+
+.product-detail-right p{
+  width: 80%;
+}

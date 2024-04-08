@@ -21,20 +21,21 @@ const ProductDetail = ({ product, onClose }) => {
             <img className="product-title-right" src={newRightImage} alt="Cuchillo" />
           </div>
           <img className="product-image" src={product.src} alt={product.alt} />
-          <h3>{product.description}</h3>
-          <button className="bimageInfo">Botón adicional</button>
         </div>
         <div className="product-detail-right">
           <div className="p-content">
             <div className="image-left">
               <img className='bigote' src={leftImage} alt="Bigote izquierdo" />
             </div>
-            <h2>Contiene</h2>
+            <h2>Descripción</h2>
             <div className="image-right">
               <img className='bigote' src={rightImage} alt="Bigote derecho" />
           </div>
         </div>
-          <h3>{product.description}</h3>
+          {/* Mapea el array descripcion_producto y renderiza cada párrafo dentro de un elemento <p> */}
+          {product.descripcion_producto.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
           <button className="bimageInfo">Botón adicional</button>
         </div>
       </div>

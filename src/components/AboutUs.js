@@ -1,7 +1,6 @@
 // src/components/AboutUs.js
 
 import React from 'react';
-import { LoremIpsum } from 'lorem-ipsum';
 import './AboutUs.css';
 import leftImage from '../img/Bigote-izquierdo.png';
 import rightImage from '../img/Bigote_derecho.png';
@@ -9,7 +8,6 @@ import newLeftImage from '../img/Tenedor.png';
 import newRightImage from '../img/Cuchillo.png';
 
 function AboutUs() {
-  const lorem = new LoremIpsum();
 
   return (
     <section className="about">
