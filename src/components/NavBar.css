@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 0; /* Modificar el padding */
-  background-color: #1c1b1a;
+  background-color: black;
   color: white;
   height: 80px; /* Altura predeterminada */
   position: sticky; /* Cambiar de fixed a sticky */

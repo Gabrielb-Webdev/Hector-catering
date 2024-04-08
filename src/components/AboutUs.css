@@ -3,7 +3,7 @@
 .about {
   text-align: center;
   margin-top: -5px;
-  background-color: #F3B01C;
+  background-color: #25211d;
 }
 
 .about-content {
@@ -90,4 +90,10 @@ img.bigote {
     .new-left-image img{
       display: none;
     }
+}
+
+h2,
+h3,
+p {
+  color: #f3b01b;
 }
