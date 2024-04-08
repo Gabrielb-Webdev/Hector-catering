@@ -83,6 +83,7 @@ img.bigote {
     font-weight: 600;
     font-style: normal;
     font-size: 1.5rem;
+    color: #f3b01b;
 }
 
 @media (max-width: 780px) {

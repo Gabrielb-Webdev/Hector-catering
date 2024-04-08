@@ -10,27 +10,35 @@
 }
 
 .ReactModal__Content.ReactModal__Content--after-open {
-    background-color: rgba(243, 176, 27, 0.7) !important; /* Color #f3b01b con 70% de opacidad */
+    background-color: #25211d !important;
+    padding: 50px !important;
+    inset: 75px !important;
 }
 
 .product-image {
-  width: 60%; /* Ajusta el ancho máximo de la imagen */
+  width: 80%;
+  max-width: 100%; /* Ajusta el ancho máximo de la imagen */
   height: auto; /* Mantiene la proporción de la imagen */
+  margin-left: 25px;
 }
 
 .product-detail-container {
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+}
+
+.product-detail-left,
+.product-detail-right {
+  flex: 1;
+  padding: 0 10px; /* Espacio entre los elementos si es necesario */
 }
 
 .product-detail-left {
-  flex: 1;
-  margin-right: 20px;
+  text-align: left; /* Alinea el contenido a la izquierda */
 }
 
 .product-detail-right {
-  flex: 1;
-  margin-left: 20px;
+  text-align: right; /* Alinea el contenido a la derecha */
 }
 
 .product-title-container {
@@ -48,7 +56,7 @@
 
 .product-title-right {
     /* flex: 1; */
-    width: 3.5%;
+    width: 6%;
     text-align: right;
     margin-left: 10px;
 }
@@ -64,4 +72,24 @@
 
 .product-title-container h2 {
     width: 70%;
+    font-size: 4rem;
 }
+
+/* Agrega esto al archivo ProductDetail.css */
+.close-button {
+  position: absolute;
+  top: 5px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f3b01b; /* Color de fondo con opacidad */
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
