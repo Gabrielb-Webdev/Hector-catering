@@ -118,6 +118,7 @@
     justify-content: center;
     align-items: center;
     color: white;
+    z-index: 10000;
 }
 
 .product-detail-right h3,
