@@ -1,4 +1,5 @@
 // src/components/ProductCarousel.js
+
 import React, { useState } from "react";
 import Slider from "react-slick";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
