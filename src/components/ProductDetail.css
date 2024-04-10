@@ -110,3 +110,54 @@ p.text {
 .product-detail-right p{
   width: 80%;
 }
+
+@media only screen and (max-width: 800px) {
+  .product-detail-container {
+    flex-direction: column; /* Cambiar a dirección de columna en pantallas pequeñas */
+    justify-content: center; /* Centrar contenido verticalmente */
+    align-items: center; /* Centrar contenido horizontalmente */
+  }
+
+  .product-detail-left,
+  .product-detail-right {
+    width: 100%; /* Ocupar todo el ancho en pantallas pequeñas */
+    text-align: center; /* Centrar contenido en pantallas pequeñas */
+    margin: 20px 0; /* Agregar espacio entre las secciones */
+  }
+
+  .product-detail-right {
+    margin-top: 0; /* Eliminar margen superior en la sección derecha */
+  }
+
+  .product-title-container {
+    flex-direction: column; /* Apilar imágenes y título en pantallas pequeñas */
+    align-items: center; /* Centrar elementos en pantallas pequeñas */
+  }
+
+  .product-title-left,
+  .product-title-right {
+    display: none;
+  }
+
+  .product-title-container h2 {
+    width: auto; /* Ancho automático para el título en pantallas pequeñas */
+    font-size: 3rem; /* Reducir tamaño de fuente del título en pantallas pequeñas */
+  }
+
+  .product-image {
+    margin-left: auto; /* Centrar imagen del producto en pantallas pequeñas */
+    margin-right: auto;
+    width: 85%;
+  }
+
+  .product-detail-container .p-content{
+    padding-top: unset;
+    margin-left: unset;
+  }
+
+  .product-detail-right h3,
+  .product-detail-right p {
+    margin-left: auto; /* Centrar texto en la sección derecha en pantallas pequeñas */
+    margin-right: auto;
+  }
+}
