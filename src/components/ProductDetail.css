@@ -160,4 +160,16 @@ p.text {
     margin-left: auto; /* Centrar texto en la sección derecha en pantallas pequeñas */
     margin-right: auto;
   }
+
+  .bimageInfo-p{
+    width: 75%;
+  }
+
+  .ReactModal__Content.ReactModal__Content--after-open{
+    inset: 25px !important;
+  }
+
+  .p-content h2{
+    font-size: 1.5rem;
+  }
 }
