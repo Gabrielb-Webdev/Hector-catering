@@ -42,7 +42,8 @@
 
 .nextArrow,
 .prevArrow{
-  top: 35%;
+  top: 25%;
+  color: white;
 }
 
 .app-container {
