@@ -123,3 +123,19 @@
   margin: 2% 0px 0 0;
 }
 
+.carousel-button{
+  width: 28%;
+}
+
+.carousel-container {
+  position: relative;
+  top: 15%;
+}
+
+@media (max-width: 800px) {
+  .carousel-button {
+    width: 35%;
+    position: relative;
+    right: 6%;
+  }
+}

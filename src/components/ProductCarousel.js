@@ -1,6 +1,4 @@
-// src/components/ProductCarousel.js
-
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import leftImage from '../img/Bigote-izquierdo.png';
@@ -31,6 +29,29 @@ const ProductCarousel = ({ slidesToShow = 3 }) => {
   const [selectedProductIndex, setSelectedProductIndex] = useState(0);
   const [showDetail, setShowDetail] = useState(false);
 
+  useEffect(() => {
+    // Agrega o elimina la clase 'modalOpen' del elemento body según el estado de 'showDetail'
+    if (showDetail) {
+      document.body.classList.add("modalOpen");
+    } else {
+      document.body.classList.remove("modalOpen");
+    }
+
+    // Limpieza al desmontar el componente
+    return () => {
+      document.body.classList.remove("modalOpen");
+    };
+  }, [showDetail]);
+
+  const toggleDetail = (idx) => {
+    setSelectedProductIndex(idx);
+    setShowDetail(true);
+  };
+
+  const handleCloseDetail = () => {
+    setShowDetail(false);
+  };
+
   const settings = {
     centerMode: true,
     infinite: true,
@@ -59,15 +80,6 @@ const ProductCarousel = ({ slidesToShow = 3 }) => {
         },
       },
     ],
-  };
-
-  const toggleDetail = (idx) => {
-    setSelectedProductIndex(idx);
-    setShowDetail(true);
-  };
-
-  const handleCloseDetail = () => {
-    setShowDetail(false);
   };
 
   return (
