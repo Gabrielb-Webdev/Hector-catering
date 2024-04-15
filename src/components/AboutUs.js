@@ -1,3 +1,5 @@
+// src/components/AboutUs.js
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './AboutUs.css';
@@ -10,7 +12,7 @@ function AboutUs() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8000/consulta.php')
+    axios.get('/consulta.php') // Cambia la URL para que sea relativa
       .then(response => {
         setData(response.data);
       })
