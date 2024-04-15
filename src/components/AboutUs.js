@@ -12,7 +12,7 @@ function AboutUs() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('/consulta.php') // Cambia la URL para que sea relativa
+    axios.get('http://localhost:8000/consulta.php')
       .then(response => {
         setData(response.data);
       })
