@@ -1,3 +1,5 @@
+<!-- conexion.php -->
+
 <?php
 $servername = "viaduct.proxy.rlwy.net";
 $username = "root";
